@@ -8,6 +8,7 @@ import { App } from './App';
 import { HomePage } from './pages/home-page';
 import { DetailPage } from './pages/detail-page';
 import { EpisodePage } from './pages/episode-page';
+import { ErrorPage } from './pages/error-page';
 
 import './index.css';
 
@@ -20,6 +21,7 @@ ReactDOM.render(
             <Route exact path="/" component={HomePage} />
             <Route exact path="/:showId/shows/" component={DetailPage} />
             <Route exact path="/:showId/shows/:episodeId/episode/:season/:number/" component={EpisodePage} />
+            <Route path="*" component={ErrorPage} />
           </Switch>
         </App>
       </Provider>
