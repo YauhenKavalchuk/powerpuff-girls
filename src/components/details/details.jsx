@@ -5,7 +5,7 @@ import styles from './details.module.css';
 export const Details = ({ details }) => (
   <article className={styles.article}>
     <div className={styles.imageWrapper}>
-      <img className={styles.preview} src={details.image.medium} alt={details.name} />
+      <img className={styles.preview} src={details?.image?.medium} alt={details.name} />
       <time className={styles.time}>{details.airdate || details.premiered}</time>
     </div>
     <div className={styles.description}>
@@ -29,7 +29,7 @@ Details.propTypes = {
 
 Details.defaultProps = {
   details: {
-    name: 'Enpty name',
+    name: 'Empty name',
     airdate: '',
     premiered: '',
     summary: 'No description',
