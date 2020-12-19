@@ -12,17 +12,17 @@ export const selectEpisodes = store => store?.data?.episodes;
 
 export const DetailPage = () => {
   const dispatch = useDispatch();
-  const { id } = useParams();
+  const { showId } = useParams();
 
   const details = useSelector(selectDetails);
   const episodes = useSelector(selectEpisodes);
 
   useEffect(() => {
-    if (id) {
-      dispatch(requestApiDetails(id));
-      dispatch(requestApiEpisodes(id));
+    if (showId) {
+      dispatch(requestApiDetails(showId));
+      dispatch(requestApiEpisodes(showId));
     }
-  }, [id]);
+  }, [showId]);
 
   return (
     <section>
