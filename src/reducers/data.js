@@ -1,4 +1,8 @@
-import { RECEIVE_API_DETAILS, RECEIVE_API_EPISODES } from '../actions';
+import {
+  RECEIVE_API_DETAILS,
+  RECEIVE_API_EPISODES,
+  RECEIVE_API_EPISODE_DETAILS,
+} from '../actions';
 
 export default (state = {}, { type, data }) => {
   switch (type) {
@@ -11,6 +15,11 @@ export default (state = {}, { type, data }) => {
       return {
         ...state,
         episodes: data,
+      };
+    case RECEIVE_API_EPISODE_DETAILS:
+      return {
+        ...state,
+        episodeDetails: data,
       };
     default:
       return state;
