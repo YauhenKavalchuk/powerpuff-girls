@@ -2,3 +2,9 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-auto-rows: auto 1fr auto;
+}
