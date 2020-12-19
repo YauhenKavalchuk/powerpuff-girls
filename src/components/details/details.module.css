@@ -1,0 +1,8 @@
+.article {
+  padding: 24px;
+  display: flex;
+}
+
+.preview {
+  margin-right: 24px;
+}
