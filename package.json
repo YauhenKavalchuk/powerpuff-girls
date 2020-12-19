@@ -21,8 +21,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:ci": "npm test -- --watchAll=false",
-    "test:ci:coverage": "npm run test:ci -- --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js"
   },
