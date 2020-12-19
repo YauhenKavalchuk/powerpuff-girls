@@ -7,7 +7,7 @@ export const Header = () => (
     <nav>
       <ul className={styles.nav}>
         <li><NavLink exact to="/">Home</NavLink></li>
-        <li><NavLink to="/shows/6771">Powerpuff Girls</NavLink></li>
+        <li><NavLink to="/6771/shows/">Powerpuff Girls</NavLink></li>
       </ul>
     </nav>
   </header>
