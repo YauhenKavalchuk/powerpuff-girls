@@ -7,6 +7,8 @@ import { Details } from '../../components/details';
 
 import { requestApiEpisodeDetails } from '../../actions';
 
+import styles from './episode-page.module.css';
+
 export const selectEpisodeDetails = store => store?.data?.episodeDetails;
 
 export const EpisodePage = ({ history }) => {
@@ -27,7 +29,9 @@ export const EpisodePage = ({ history }) => {
 
   return (
     <section>
-      <button type="button" onClick={handleGoBack}>Back</button>
+      <div className={styles.navigation}>
+        <button type="button" onClick={handleGoBack}>Back</button>
+      </div>
       <Details details={episodeDetails} />
     </section>
   );

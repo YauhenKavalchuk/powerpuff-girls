@@ -6,7 +6,9 @@ import { Footer } from './layout/footer';
 export const App = ({ children }) => (
   <>
     <Header />
-    {children}
+    <main>
+      {children}
+    </main>
     <Footer />
   </>
 );

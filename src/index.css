@@ -8,3 +8,7 @@ body {
   display: grid;
   grid-auto-rows: auto 1fr auto;
 }
+
+main {
+  padding: 24px;
+}

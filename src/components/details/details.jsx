@@ -4,7 +4,10 @@ import styles from './details.module.css';
 
 export const Details = ({ details }) => (
   <article className={styles.article}>
-    <img className={styles.preview} src={details.image.medium} alt={details.name} />
+    <div className={styles.imageWrapper}>
+      <img className={styles.preview} src={details.image.medium} alt={details.name} />
+      <time className={styles.time}>{details.airdate || details.premiered}</time>
+    </div>
     <div className={styles.description}>
       <h2>{details.name}</h2>
       <div dangerouslySetInnerHTML={{ __html: details.summary }} />
@@ -14,8 +17,9 @@ export const Details = ({ details }) => (
 
 Details.propTypes = {
   details: PropTypes.shape({
-    id: PropTypes.number,
     name: PropTypes.string,
+    airdate: PropTypes.string,
+    premiered: PropTypes.string,
     summary: PropTypes.string,
     image: PropTypes.shape({
       medium: PropTypes.string,
@@ -25,11 +29,12 @@ Details.propTypes = {
 
 Details.defaultProps = {
   details: {
-    id: null,
     name: 'Enpty name',
-    summary: '',
+    airdate: '',
+    premiered: '',
+    summary: 'No description',
     image: {
-      medium: '',
+      medium: 'https://via.placeholder.com/250x140',
     },
   },
 };
