@@ -1,6 +1,6 @@
 .header {
   min-height: 100px;
-  background-color: #D43728;
+  background-color: #d43728;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
@@ -33,6 +33,6 @@
 }
 
 .nav a:hover,
-.nav a.active {
-  background-color: rgba(0,0,0,.2);
+.nav :global(a.active) {
+  background-color: rgba(0, 0, 0, 0.2);
 }
