@@ -18,7 +18,7 @@ export const Episodes = ({ episodes }) => {
           season,
           number,
         }) => (
-          <li key={id}>
+          <li key={id} data-testid="episode">
             <Link to={`${id}/episode/${season}/${number}`}>{name}</Link>
           </li>
         ))}
@@ -31,6 +31,8 @@ Episodes.propTypes = {
   episodes: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
+    season: PropTypes.number,
+    number: PropTypes.number,
   })),
 };
 
