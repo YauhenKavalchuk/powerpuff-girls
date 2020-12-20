@@ -6,10 +6,9 @@ import { useParams } from 'react-router-dom';
 import { Details } from '../../components/details';
 
 import { requestApiEpisodeDetails } from '../../actions';
+import { selectEpisodeDetails } from '../../shared/selectors';
 
 import styles from './episode-page.module.css';
-
-export const selectEpisodeDetails = store => store?.data?.episodeDetails;
 
 export const EpisodePage = ({ history }) => {
   const dispatch = useDispatch();
@@ -30,7 +29,7 @@ export const EpisodePage = ({ history }) => {
   return (
     <section>
       <div className={styles.navigation}>
-        <button type="button" onClick={handleGoBack}>Back</button>
+        <button type="button" onClick={handleGoBack} className={styles.backBtn}>Back</button>
       </div>
       <Details details={episodeDetails} />
     </section>

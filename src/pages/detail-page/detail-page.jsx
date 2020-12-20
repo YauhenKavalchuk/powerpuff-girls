@@ -6,9 +6,7 @@ import { Details } from '../../components/details';
 import { Episodes } from '../../components/episodes';
 
 import { requestApiDetails, requestApiEpisodes } from '../../actions';
-
-export const selectDetails = store => store?.data?.details;
-export const selectEpisodes = store => store?.data?.episodes;
+import { selectDetails, selectEpisodes } from '../../shared/selectors';
 
 export const DetailPage = () => {
   const dispatch = useDispatch();
