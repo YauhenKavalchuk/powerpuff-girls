@@ -17,6 +17,9 @@ Launches the test runner in the interactive watch mode.
 `yarn test:ci:coverage`
 Run all tests and shows project coverage.
 
+`yarn lint`
+Launches the code linter to verify code quality.
+
 `yarn build`
 Builds the app for production to the `build` folder.
 
